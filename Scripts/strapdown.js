@@ -360,11 +360,12 @@ var PR=win['PR']={'createSimpleLexer':createSimpleLexer,'registerLangHandler':re
   // Get origin of script
   var origin = '';
   for (var i = 0; i < scriptEls.length; i++) {
-    if (scriptEls[i].src.match('strapdown')) {
-      origin = scriptEls[i].src;
+    if (scriptEls[i].src.match('jquery')) {	//if (scriptEls[i].src.match('strapdown')) 
+      origin = scriptEls[i].src; 
     }
   }
   var originBase = origin.substr(0, origin.lastIndexOf('/'));
+  originBase = originBase.substr(0, originBase.lastIndexOf('/'));
 
   // Get theme
   var theme = markdownEl.getAttribute('theme') || 'bootstrap';
