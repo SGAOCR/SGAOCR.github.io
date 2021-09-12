@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html>
 
+
+<script src="Scripts/jquery-3.5.1.min.js"></script>
+
+
+<title>Professors</title>
+
+<xmp theme="readable" style="display:none;" id="content">
+
+</xmp>
+
+<body>
+
+<script>
+
+         $.get('Markdown/Prof.md', function(data) {
+
+		 $('#content').text(data);
+		 
+		 $.get('Scripts/strapdown.js', function(data) {
+
+        }, 'script');
+
+            
+        }, 'text');
+</script>
+
+
+
+</body>
+
+</html>
